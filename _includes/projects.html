@@ -9,7 +9,7 @@
         {% if post.title %}
         <h4>{{ post.title }}</h4>
         {% endif %}
-        Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
+        {{ post.excerpt }}
       </div>
       <div class="mdl-card__actions">
         <a href="{{ post.url | prepend: site.baseurl }}" class="mdl-button">Read more</a>
@@ -19,9 +19,8 @@
       <i class="material-icons">more_vert</i>
     </button>
     <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-      <li class="mdl-menu__item">Lorem</li>
-      <li class="mdl-menu__item" disabled>Ipsum</li>
-      <li class="mdl-menu__item">Dolor</li>
+      <li class="mdl-menu__item" {% unless post.source %} disabled {% endunless %}>View Source</li>
+      <li class="mdl-menu__item" {% unless post.download %} disabled {% endunless %}>Download</li>
     </ul>
   </section>
 {% endfor %}

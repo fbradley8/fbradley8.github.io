@@ -13,5 +13,17 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.js"></script>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.location.hash.substring(1);
+      if (hash.length) {
+        link = window.top.document.querySelectorAll('a[href="#' + hash + '"]');
+        setTimeout(function() {
+          link[0].click();
+        }, 500)
+      }
+    });
+  </script>
 </head>
