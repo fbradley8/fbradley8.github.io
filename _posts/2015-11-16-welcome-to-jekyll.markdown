@@ -1,25 +1,25 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Conveyr: The automation revolution"
 date:   2015-11-16 16:29:24
-categories: projects
+categories: projects featured
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Automated project management walks a tight rope between cost and ease-of-use. As a result, cheap/free software is a no-brainer for small businesses.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+While working at Solar Universe, our project data was scattered between Salesforce for customer information, Google Sheets for project statuses, Google Drive for documents, Google Calendar for scheduling, Smartsheet for accounting and project coordination, Quickbooks for invoicing, etc etc the list goes on. Despite having the resources of a national franchise, the efficiency of modern software solutions simply wasn't there. The tools we had weren't being used correctly or taken full advantage of and the software we wanted to use was too expensive. No one knew for certain which projects were theirs and which needed attention. Some projects sat with no activity for weeks until someone realized they had been forgotten aobut. With no clear direction and process, our fulfillment speed suffered and stress levels soared.
 
-Jekyll also offers powerful support for code snippets:
+Then I was layed off.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+In retrospect, I should have seen it coming, but that's beside the point. Enter Conveyr: the cheap cloud project manager to end the careful dance between freewares. The solution was clean, easy to use, and most importantly cheap. For the software to address key pain points it needed to:
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+- Guide projects to completion
+- Auto-assign tasks
+- Store customer info and project data in one place
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+Having worked with Salesforce before, I wanted to create a system where automation felt tangible and accessible to everyone. No apex code, no triggers, no workflow hell. Conveyor belts inspired me to design a similar process, where projects were boxed up and moved down the line step by step to completion. For each product or service, Conveyr would have a "belt" or pipeline that was made up of stages. Each stage had a to-do list to be completed before moving to the next stage. Basic project management: done.
+
+At first I thought it would be nice if each employee "owned" projects in a particular stage. Accounting would have an accounting stage and then contracting, construction, monitoring, finish. As it happens, small business employees sometimes wear many hats and Conveyr needed to be able to handle that. Subscription based task assignment was perfect. Each employee would decide which projects they needed to see at specific stages. Users were presented with a list of all stages and would select which ones they wanted to subscribe to. The Conveyr dashboard would then aggregate together all the to-do lists for all subscribed stages and show the projects that needed those specific todo's to be completed. Auto-assigned tasks with group visibility: done.
+
+For every piece of information to be in one place, users would have to both *want* and *be able* to store everything in Conveyr. That meant files, photos, links, comments, statuses, updates, and more needed to be accessible from the project page. If Conveyr was going to be a one stop shop, it needed to be fast and beautiful as well. I wanted to do everything in Javascript to simplify development and have reusable code. MEAN stack: MongoDB, Express, Angular, Node.js. I'm quite ambitious and have high hopes for Conveyr, so it only made sense to design it as a highly scalable cloud application. MongoDB is insanely fast and storing data in it feels seamless and natural. Node scales beautifully using docker on DigitalOcean. For each new client, a new worker (or droplet if full) would spin up and provision a new database. The front-end was completely separate from the back and that design ended up being useful when I later created a customer portal. Special public endpoints were setup to provide my customer's customers with their project's status and shared files.
+
+One stop shop: done
