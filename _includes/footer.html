@@ -2,41 +2,43 @@
   <div class="mdl-mega-footer--middle-section">
     <div class="mdl-mega-footer--drop-down-section">
       <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-      <h1 class="mdl-mega-footer--heading">Features</h1>
+      <h1 class="mdl-mega-footer--heading">Main</h1>
       <ul class="mdl-mega-footer--link-list">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Partners</a></li>
-        <li><a href="#">Updates</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Resume</a></li>
       </ul>
     </div>
     <div class="mdl-mega-footer--drop-down-section">
       <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-      <h1 class="mdl-mega-footer--heading">Details</h1>
+      <h1 class="mdl-mega-footer--heading">Featured Projects</h1>
       <ul class="mdl-mega-footer--link-list">
-        <li><a href="#">Spec</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Resources</a></li>
+      {% for post in site.posts %}
+        {% if post.categories contains 'featured' %}
+        <li><a href="{{post.url}}">{{post.title}}</a></li>
+        {% endif %}
+      {% endfor %}
       </ul>
     </div>
     <div class="mdl-mega-footer--drop-down-section">
       <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-      <h1 class="mdl-mega-footer--heading">Technology</h1>
+      <h1 class="mdl-mega-footer--heading">Connect</h1>
       <ul class="mdl-mega-footer--link-list">
-        <li><a href="#">How it works</a></li>
-        <li><a href="#">Patterns</a></li>
-        <li><a href="#">Usage</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Contracts</a></li>
+        <li><a href="https://github.com/fbradley8">GitHub</a></li>
+        <li><a href="https://twitter.com/ForrestJBradley">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/forrest-bradley-4b70b33b">LinkedIn</a></li>
+        <li><a href="https://www.facebook.com/fbradley8">Facebook</a></li>
+        <!-- <li><a href="#">Instagram</a></li> -->
       </ul>
     </div>
     <div class="mdl-mega-footer--drop-down-section">
       <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-      <h1 class="mdl-mega-footer--heading">FAQ</h1>
+      <h1 class="mdl-mega-footer--heading">Some Other Stuff</h1>
       <ul class="mdl-mega-footer--link-list">
-        <li><a href="#">Questions</a></li>
-        <li><a href="#">Answers</a></li>
-        <li><a href="#">Contact us</a></li>
+        <li><a href="https://www.flickr.com/photos/fbradley8/">Flickr</a></li>
+        <li><a href="https://www.npmjs.com/~fbradley8">npm</a></li>
+        <li><a href="http://steamcommunity.com/id/fbradley8">Steam</a></li>
       </ul>
     </div>
   </div>
@@ -44,10 +46,8 @@
     <div class="mdl-logo">
       &copy; Forrest Bradley
     </div>
-    <ul class="mdl-mega-footer--link-list">
-      <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
-      <li><a href="#">Help</a></li>
+<!--     <ul class="mdl-mega-footer--link-list">
       <li><a href="#">Privacy and Terms</a></li>
-    </ul>
+    </ul> -->
   </div>
 </footer>

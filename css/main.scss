@@ -58,7 +58,15 @@ section h3:first-of-type {
 .text-center {
   text-align: center;
 }
-
+.post-content {
+  padding: 15px 0 50px;
+}
+i {
+  cursor: default;
+}
+hr {
+  margin: 40px 0;
+}
 
 .card-container {
   display: flex;

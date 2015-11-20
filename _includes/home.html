@@ -4,72 +4,44 @@
       <h3 class="text-center">Featured Projects</h3>
 
       <div class="card-container">
+      {% for post in site.posts %}
+        {% if post.categories contains 'featured' %}
         <div class="project-card mdl-card mdl-shadow--2dp">
           <div class="mdl-card__title mdl-card--expand">
             <h4>
-              Project Name<br>
+              {{post.title}}<br>
             </h4>
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            <a href="{{post.url}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
               View Project
             </a>
             <div class="mdl-layout-spacer"></div>
-            <i class="material-icons">code</i>
+            {% if post.source %}
+            <i id="{{post.id}}" class="material-icons">code</i>
+            <div for="{{post.id}}" class="mdl-tooltip">
+              Open Source
+            </div>
+            {% else %}
+            <i id="{{post.id}}" class="material-icons">lock_outline</i>
+            <div for="{{post.id}}" class="mdl-tooltip">
+              Closed Source
+            </div>
+            {% endif %}
           </div>
         </div>
-        <div class="project-card mdl-card mdl-shadow--2dp">
-          <div class="mdl-card__title mdl-card--expand">
-            <h4>
-              Project Name<br>
-            </h4>
-          </div>
-          <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-              View Project
-            </a>
-            <div class="mdl-layout-spacer"></div>
-            <i class="material-icons">code</i>
-          </div>
-        </div>
-        <div class="project-card mdl-card mdl-shadow--2dp">
-          <div class="mdl-card__title mdl-card--expand">
-            <h4>
-              Project Name<br>
-            </h4>
-          </div>
-          <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-              View Project
-            </a>
-            <div class="mdl-layout-spacer"></div>
-            <i class="material-icons">code</i>
-          </div>
-        </div>
+        {% endif %}
+      {% endfor %}
       </div>
-<hr>
+      
+      <hr>
+
       <h3 class="text-center">Background</h3>
-      <p>Minim duis incididunt est cillum est ex occaecat consectetur. Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.</p>
-      <ul class="toc">
-        <h4>Contents</h4>
-        <a href="#lorem1">Lorem ipsum</a>
-        <a href="#lorem2">Lorem ipsum</a>
-        <a href="#lorem3">Lorem ipsum</a>
-        <a href="#lorem4">Lorem ipsum</a>
-        <a href="#lorem5">Lorem ipsum</a>
-      </ul>
+      <p class="text-center">You could say I'm a front-end engineer, but I enjoy doing it all. I've been up in the attic wiring buildings, at the mall setting up networks, administering systems at attorneys offices around the bay, and programming at a desk in the corporate cube farm. I like to think I'm well rounded. The MEAN stack is my favorite and I enjoy hacking on bleeding edge technologies. I'm always learning something new and coming up with disruptive ideas. My entrepreneurial spirit keeps me active and I'll occasionally contribute to open-source projects, but most of my time is spent on my own.</p>
 
-      <h5 id="lorem1">Lorem ipsum dolor sit amet</h5>
-      Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
-      <ul>
-        <li>Nisi qui nisi duis commodo duis reprehenderit consequat velit aliquip.</li>
-        <li>Dolor consectetur incididunt in ipsum laborum non et irure pariatur excepteur anim occaecat officia sint.</li>
-        <li>Lorem labore proident officia excepteur do.</li>
-      </ul>
+      <hr>
 
-      <p>
-        Sit qui est voluptate proident minim cillum in aliquip cupidatat labore pariatur id tempor id. Proident occaecat occaecat sint mollit tempor duis dolor cillum anim. Dolore sunt ea mollit fugiat in aliqua consequat nostrud aliqua ut irure in dolore. Proident aliqua culpa sint sint exercitation. Non proident occaecat reprehenderit veniam et proident dolor id culpa ea tempor do dolor. Nulla adipisicing qui fugiat id dolor. Nostrud magna voluptate irure veniam veniam labore ipsum deserunt adipisicing laboris amet eu irure. Sunt dolore nisi velit sit id. Nostrud voluptate labore proident cupidatat enim amet Lorem officia magna excepteur occaecat eu qui. Exercitation culpa deserunt non et tempor et non.
-      </p>
+      
     </div>
   </section>
 
