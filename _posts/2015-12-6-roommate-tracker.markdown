@@ -11,9 +11,9 @@ After a few months of living like this I decided on a new purpose for my 7" USB 
 
 For this project I used:
 
--Raspberry Pi 1 Model B
--Mimo 720F 7" USB Touchscreen Monitor
--Edimax EW-7811Un Wi-Fi USB Adapter
+- Raspberry Pi 1 Model B
+- Mimo 720F 7" USB Touchscreen Monitor
+- Edimax EW-7811Un Wi-Fi USB Adapter
 
 If you're going to replicate this project, please don't use the same USB monitor I used. They're overpriced and linux support is terrible. Try out the [official Raspi touchscreen](http://www.element14.com/community/docs/DOC-78156?ICID=rpiaccsy-access-products) and let me know what you think.
 
