@@ -3,6 +3,7 @@ layout: post
 title:  "Apache Configuration Switcher"
 date:   2015-5-14
 categories: projects
+source: https://github.com/fbradley8/a2switch
 ---
 The front-end is an exciting place to be, but there's chaos in that fast-paced environment. I'm being dramatic of course, but it's essential to have a streamlined development environment when you're frequently switching between projects.
 
@@ -31,4 +32,4 @@ If you already use node.js and npm then my solution will fit right into your cur
 
 The interface is very simple and you can select which sites you want enabled using the arrow keys and spacebar. After selecting which sites you want enabled they will be linked/unlinked from the sites-enabled folder and the apache service will be reloaded. In my opinion, this is how it should have worked from the beginning.
 
-For how basic it is, the app is quite functional. I considered adding other features like preset groups, but that seemed overkill. Check it out over at npm or GitHub!
+For how basic it is, the app is quite functional. I considered adding other features like preset groups, but that seemed overkill. Check it out over at [npm](https://www.npmjs.com/package/a2switch) or [GitHub](https://github.com/fbradley8/a2switch)!
