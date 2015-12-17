@@ -47,10 +47,10 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "navigation",
-        "mdl-overrides"
+        "mdl-overrides",
+        "syntax-highlighting"
 //         "base",
 //         "layout",
-//         "syntax-highlighting"
 ;
 section h3:first-of-type {
   margin-top: 0;
