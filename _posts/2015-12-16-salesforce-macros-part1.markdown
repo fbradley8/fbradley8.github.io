@@ -15,12 +15,12 @@ Now that we have the technologies sorted out let's get to features.
 How many times a day do you send out the same email? Today was a great day and you onboarded 20 new clients. The steps to send out this typical email are:
 
 1. Go to the case you're working out of
-* Click Send Email
-* Select the email your department uses for the From field
-* Open a new tab and go back to the account to see if the To field has the correct billing contact
-* Pick the email template
-* Change the subject if needed
-* Attach a copy of the client's first invoice that you built by hand
+1. Click Send Email
+1. Select the email your department uses for the From field
+1. Open a new tab and go back to the account to see if the To field has the correct billing contact
+1. Pick the email template
+1. Change the subject if needed
+1. Attach a copy of the client's first invoice that you built by hand
 
 We'll dive into that last step later, but the others can all be predefined and filled out by a macro.
 
@@ -37,8 +37,8 @@ This part will seem crazy and won't apply to everyone, but the concept is what m
 This would be a new type of macro. To save time, I actually cheated and hard-coded this macro. There was no point in adding the functionality to script macros. It would reduce user friendliness and only benefit power users, of which our client services department had none. I named the macro "Generate Invoice" and when clicked, the following events would execute:
 
 1. Get the object the user is looking at using chrome.tabs api
-* After looking up the object, lookup the associated account
-* Retreive the desired opportunity based on type and closed/won
-* POST the data to a Google Apps Script that will assemble a document and return it as a PDF
+1. After looking up the object, lookup the associated account
+1. Retreive the desired opportunity based on type and closed/won
+1. POST the data to a Google Apps Script that will assemble a document and return it as a PDF
 
 Read about how to create a document-generating Google Apps Script in part 2 (coming soon).
