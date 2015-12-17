@@ -14,7 +14,7 @@ Now that we have the technologies sorted out let's get to features.
 
 How many times a day do you send out the same email? Today was a great day and you onboarded 20 new clients. The steps to send out this typical email are:
 
-* Go to the case you're working out of
+1. Go to the case you're working out of
 * Click Send Email
 * Select the email your department uses for the From field
 * Open a new tab and go back to the account to see if the To field has the correct billing contact
@@ -36,7 +36,7 @@ This part will seem crazy and won't apply to everyone, but the concept is what m
 
 This would be a new type of macro. To save time, I actually cheated and hard-coded this macro. There was no point in adding the functionality to script macros. It would reduce user friendliness and only benefit power users, of which our client services department had none. I named the macro "Generate Invoice" and when clicked, the following events would execute:
 
-* Get the object the user is looking at using chrome.tabs api
+1. Get the object the user is looking at using chrome.tabs api
 * After looking up the object, lookup the associated account
 * Retreive the desired opportunity based on type and closed/won
 * POST the data to a Google Apps Script that will assemble a document and return it as a PDF
