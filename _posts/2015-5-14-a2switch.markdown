@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Apache Configuration Switcher"
+date:   2015-5-14
+categories: projects
+---
+The front-end is an exciting place to be, but there's chaos in that fast-paced environment. I'm being dramatic of course, but it's essential to have a streamlined development environment when you're frequently switching between projects.
+
+Nolo.com's front-end is comprised of several separate applications that all interact one way or another. You might notice subtle differences when switching between nolo.com and the Nolo store, for example. These are actually two applications designed to look alike. Drupal powers our very large content collection and Magento powers the online store. Sometimes I need to switch between these applications several times an hour. The usual way to make the switch would be to run the following:
+
+{% highlight bash %}
+$ a2dissite example1.conf
+$ a2ensite example2.conf
+$ sudo service apache2 reload
+{% endhighlight %}
+
+If you didn't know about those shortcuts, then you've probably been doing something like this:
+
+{% highlight bash %}
+$ cd /etc/apache2/sites-enabled
+$ sudo unlink example1.conf
+$ sudo ln -s ../sites-available/example2.conf
+$ sudo service apache2 reload
+{% endhighlight %}
+
+The benefit of the first way being that a2dissite shows which sites are already enabled when you hit tab. If you're like me and you have to frequently switch between two or more configurations at a time, this process gets repetitive and therefore annoying.
+
+If you already use node.js and npm then my solution will fit right into your current workflow. My solution was to make a global npm module called a2switch.
+
+![a2switch](https://github.com/fbradley8/a2switch/raw/master/screenshot.png)
+
+The interface is very simple and you can select which sites you want enabled using the arrow keys and spacebar. After selecting which sites you want enabled they will be linked/unlinked from the sites-enabled folder and the apache service will be reloaded. In my opinion, this is how it should have worked from the beginning.
+
+For how basic it is, the app is quite functional. I considered adding other features like preset groups, but that seemed overkill. Check it out over at npm or GitHub!
