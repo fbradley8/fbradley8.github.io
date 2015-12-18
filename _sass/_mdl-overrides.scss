@@ -76,14 +76,14 @@ html, body {
   margin-top: 0;
   margin-bottom: 20px;
 }
+.mdl-demo .mdl-card .mdl-card__supporting-text p {
+  margin: 0;
+}
 .mdl-demo .mdl-card__actions {
-  // margin: 0;
-  // padding: 4px 40px;
-  // color: inherit;
+  padding: 4px 40px;
 }
 .mdl-demo .mdl-card__actions a {
   color: #00BCD4;
-  // margin: 0;
 }
 .mdl-demo .mdl-card__actions a:hover,
 .mdl-demo .mdl-card__actions a:active {
@@ -100,7 +100,7 @@ html, body {
   z-index: 999;
 }
 
-.mdl-demo .mdl-layout__content section:not(:last-of-type) {
+.mdl-demo .mdl-layout__content section {
   margin-bottom: 48px;
 }
 .mdl-demo section.section--center {
@@ -177,9 +177,6 @@ html, body {
 }
 .mdl-demo .mdl-layout__tab-panel#home {
   background-color: white;
-}
-.mdl-demo #projects section {
-  margin-bottom: 72px;
 }
 .mdl-demo #projects h4, #projects h5 {
   margin-bottom: 16px;
