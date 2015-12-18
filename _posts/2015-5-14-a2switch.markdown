@@ -4,6 +4,7 @@ title:  "Apache Configuration Switcher"
 date:   2015-5-14
 categories: projects
 source: https://github.com/fbradley8/a2switch
+image: https://github.com/fbradley8/a2switch/raw/master/screenshot.png
 ---
 The front-end is an exciting place to be, but there's chaos in that fast-paced environment. I'm being dramatic of course, but it's essential to have a streamlined development environment when you're frequently switching between projects.
 
