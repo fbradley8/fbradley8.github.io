@@ -21,8 +21,8 @@
       <i class="material-icons">more_vert</i>
     </button>
     <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn{{ forloop.index }}">
-      <li class="mdl-menu__item" {% unless post.source %} disabled {% endunless %}><a href="{{ post.source }}">View Source</a></li>
-      <li class="mdl-menu__item" {% unless post.download %} disabled {% endunless %}><a href="{{ post.download }}">Download</a></li>
+      <li {% unless post.source %} disabled {% endunless %}><a class="mdl-menu__item" href="{{ post.source }}">View Source</a></li>
+      <li {% unless post.download %} disabled {% endunless %}><a class="mdl-menu__item" href="{{ post.download }}">Download</a></li>
     </ul>
   </section>
 {% endfor %}
