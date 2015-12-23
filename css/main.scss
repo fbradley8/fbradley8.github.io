@@ -106,3 +106,7 @@ hr {
 .project-card > .mdl-card__actions > .mdl-button {
   color: #fff;
 }
+
+a[disabled] {
+    pointer-events: none;
+}
