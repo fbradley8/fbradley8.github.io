@@ -14,7 +14,7 @@ Before applying the fix I jotted down a few load times and, when I compared them
 
 #####The Solution
 
-Looking at some of the available options made my stomach turn. Optimizely wouldn't work because the test needed to be run locally, writing a benchmarking app with PhantomJS or Electron would take too long, and refreshing manually is for peasants. Then I realized all the data I needed could be accessed using the window.performance api. All I'd need to do was store the data somewhere and refresh x number of times. That my friends, is how I came up with this little number:
+Looking at some of the available options made my stomach turn. Optimizely wouldn't work because the test needed to be run locally, writing a benchmarking app with PhantomJS or Electron would take too long, and refreshing manually is for peasants. Then I realized all the data I needed could be accessed using the window.performance API. All I'd need to do was store the data somewhere and refresh x number of times. That, my friends, is how I came up with this little number:
 
 {% highlight js %}
 window.runPerformanceTest = function() {
@@ -72,8 +72,16 @@ $(window).load(function() {
 });
 {% endhighlight %}
 
-The script waits until the page has fully loaded and then stashes the window.performance.timing object in localStorage. The script will refresh the page and repeat testing until the desired number of tests have been run. The data can be collected from the key called "testData" inside DevTools > Resources > Local Storage.
+The script waits until the page has fully loaded and then stashes the window.performance.timing object in localStorage. It will refresh the page and repeat testing until the desired number of tests have been run. The data can be collected from the key called "testData" inside DevTools > Resources > Local Storage.
+
+The test can be started by running startPerformanceTest() from the console, but that's too difficult. Let's make a JavaScript bookmarklet that starts the test. Paste the following into a new bookmark URL:
+
+{% highlight js %}
+javascript:(function(){ window.startPerformanceTest(); })();
+{% endhighlight %}
+
+Clicking the bookmarklet will bring up the prompt and begin testing.
 
 #####The Result
 
-I ran 50 tests pre and post-fix to get reliable data. After converting the JSON to CSV at convertcsv.com, I pasted it into a Google Sheet and viewed the two sets on a graph. The result: a 5% speed boost from the fix. 
+I ran 50 tests pre and post-fix to get reliable data. After converting the JSON to CSV at convertcsv.com, I pasted it into a Google Sheet and viewed the two sets on a graph. The result: a 5% speed boost from the fix.
