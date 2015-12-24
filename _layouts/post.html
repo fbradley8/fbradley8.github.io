@@ -4,7 +4,7 @@ layout: default
 <div class="mdl-layout__tab-panel is-active" id="home">
   <section class="section--center mdl-grid mdl-grid--no-spacing">
     <div class="mdl-cell mdl-cell--12-col">
-      <h4>{{ page.title }}</h4>
+      <h3 class="post-content">{{ page.title }}</h3>
       {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
       <article class="post-content">
         {{ content }}
