@@ -11,7 +11,7 @@ Use cases are endless, but my current company uses it for generating invoices on
 
 To get started, sign in to Google Drive and create a new Google Apps Script. If you haven't done this before, you'll have to connect it by searching under **New** > **More** > **Connect more apps**.
 
-Once you're inside the editor, we can start building the API. Our API will only have one method: GET. Since Apps Script maps requests to function names, we'll call our first function as mandated in the docs: doGet.
+Once you're inside the editor, we can start building the API. Our API will only have one method: GET. Since Apps Script maps requests to function names, we'll call our first function as mandated in the docs: ``doGet``.
 
 {% highlight js %}
 function doGet(e) {
@@ -29,7 +29,7 @@ function doGet(e) {
 }
 {% endhighlight %}
 
-We can extract the URL parameters from e.parameters. After generating the PDF, we'll return a download link and other information inside a JSON object. Now let's add the functions that do the real work.
+We can extract the URL parameters from ``e.parameters``. After generating the PDF, we'll return a download link and other information inside a JSON object. Now let's add the functions that do the real work.
 
 {% highlight js %}
 // Replace below with your template's ID. You can find this in the URL
@@ -77,4 +77,4 @@ function createInvoice(parameters, callback) {
 }
 {% endhighlight %}
 
-The template file will have <variables> that the above script will replace. For example, if our template contains the text <price>, it will be swapped out with the price URL parameter.
+The template file will have <variables> surrounded by carats that the above script will replace. For example, if our template contains the text <price>, it will be swapped out with the price URL parameter.
