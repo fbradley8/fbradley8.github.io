@@ -65,6 +65,12 @@ section h3:first-of-type {
     font-size: 18px;
     line-height: 1.7;
   }
+  p code {
+    background-color: #FFECEC;
+    color: #FF5252;
+    padding: 3px 5px;
+    border-radius: 5px;
+  }
 }
 i {
   cursor: default;
