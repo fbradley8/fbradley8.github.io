@@ -41,4 +41,4 @@ This would be a new type of macro. To save time, I actually cheated and hard-cod
 1. Retreive the desired opportunity based on type and closed/won
 1. POST the data to a Google Apps Script that will assemble a document and return it as a PDF
 
-Read about how to create a document-generating Google Apps Script in part 2 (coming soon).
+Read about how to create a document-generating Google Apps Script in [part 2](http://www.forrestbradley.com/projects/2016/01/06/pdf-google-apps-script.html).
