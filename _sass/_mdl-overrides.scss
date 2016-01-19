@@ -107,16 +107,20 @@ html, body {
   position: relative;
   max-width: 860px;
 }
-.mdl-demo #projects section.section--center {
+.mdl-demo section.section--project {
   max-width: 620px;
+  background-size: cover;
+  border-radius: 3px;
+}
+.mdl-demo section.section--project .mdl-card {
+  background: rgba(255, 255, 255, 0.95);
 }
 .mdl-demo section > header{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.mdl-demo section > .section__play-btn {
-  border: 1px solid white;
+.mdl-demo section > .section__image {
   min-height: 200px;
 }
 .mdl-demo section > header > .material-icons {
