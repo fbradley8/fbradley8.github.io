@@ -4,6 +4,7 @@ title:  "Raspberry Pi Roommate Tracker"
 date:   2015-11-16
 categories: projects featured
 source: https://github.com/fbradley8/roommate-tracker
+image: /img/roommate-tracker.png
 ---
 Let's say you have a roommmate; one who is typically in the middle of a nap when you get home from work. You have a bright and bubbly personality so, naturally, when you get home you begin your nighttime routine by singing to the cat while loudly cooking dinner. You won't even know that your roommate wants to kill you until he comes out of the bedroom wearing an eyes-half-open scowl.
 
