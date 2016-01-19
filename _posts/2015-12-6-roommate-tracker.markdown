@@ -9,6 +9,8 @@ Let's say you have a roommmate; one who is typically in the middle of a nap when
 
 After a few months of living like this I decided on a new purpose for my 7" USB touchscreen I purchased from mimomonitors.com. I wanted a quick way of knowing who was home as soon as I walked in the front door.
 
+![roommate-tracker](/img/roommate-tracker.png)
+
 For this project I used:
 
 - Raspberry Pi 1 Model B
