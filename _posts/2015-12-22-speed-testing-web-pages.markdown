@@ -8,11 +8,11 @@ image: https://developers.google.com/web/tools/chrome-devtools/images/timeline.p
 
 Sometimes there are rare cases in which the Chrome DevTools aren't quite what you need. I recently had to perform a micro-optimization that wasn't really measureable in the network tab.
 
-#####The Problem
+##### The Problem
 
 Before applying the fix I jotted down a few load times and, when I compared them to the post-fix times, the data didn't make any sense. The only way to see if my fix had made any impact at all was to collect dozens of load times and average them. While Chrome's network tab is quite detailed, it can't help me perform multiple benchmarks.
 
-#####The Solution
+##### The Solution
 
 Looking at some of the available options made my stomach turn. Optimizely wouldn't work because the test needed to be run locally, writing a benchmarking app with PhantomJS or Electron would take too long, and refreshing manually is for peasants. Then I realized all the data I needed could be accessed using the window.performance API. All I'd need to do was store the data somewhere and refresh x number of times. That, my friends, is how I came up with this little number:
 
@@ -82,6 +82,6 @@ javascript:(function(){ window.startPerformanceTest(); })();
 
 Clicking the bookmarklet will bring up the prompt and begin testing.
 
-#####The Result
+##### The Result
 
 I ran 50 tests pre and post-fix to get reliable data. After converting the JSON to CSV at convertcsv.com, I pasted it into a Google Sheet and viewed the two sets on a graph. The result: a 5% speed boost from the fix.
