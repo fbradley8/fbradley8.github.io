@@ -7,7 +7,7 @@
     border-radius: 2px;
     margin-bottom: 16px;
     
-    pre    { margin: 0 }
+    pre    { margin: 0; overflow: auto; }
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
