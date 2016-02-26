@@ -10,7 +10,7 @@ Our registration emails needed to include data from an account's opportunities a
 
 Now that we have the technologies sorted out let's get to features.
 
-#####Email Macros
+##### Email Macros
 
 How many times a day do you send out the same email? Today was a great day and you onboarded 20 new clients. The steps to send out this typical email are:
 
@@ -30,7 +30,7 @@ The user of this extension will create a new macro and map email fields to eithe
 
 Now, when the user opens the Chrome extension and clicks the onboarding email macro, the email template will automatically be selected and all of the fields will be prefilled. All the user has to do is click send.
 
-#####Document Generation
+##### Document Generation
 
 This part will seem crazy and won't apply to everyone, but the concept is what matters. I used to build invoices by hand in Powerpoint, pulling billing data from opportunities. It would then get exported as a PDF and attached to onboarding emails in Salesforce. You would be hard pressed to find a company that onboards over 20 clients per day and builds invoices manually. Regardless, let's see how I handled this.
 
