@@ -114,6 +114,8 @@ html, body {
 }
 .mdl-demo section.section--project .mdl-card {
   background: rgba(255, 255, 255, 0.95);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .mdl-demo section > header{
   display: flex;
