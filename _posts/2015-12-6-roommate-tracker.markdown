@@ -24,6 +24,6 @@ If you're going to replicate this project, please don't use the same USB monitor
 
 Checkout the [source code]({{ page.source }}) from my GitHub. It's a node.js app running on localhost:3000. Start by running grunt. The script is simple and doesn't require a database. The server pings the predefined ip's in server.js and if it gets a response, the ip is sent to listening clients via websocket.
 
-##### Issues
+##### Caveats
 
 So here's the deal. Android devices will keep wifi on and respond to pings while the screen is off, but iPhones won't. The iPhone will switch back to cellular to save power. So if you've got an iPhone on the network, you'll need to disable this power saving feature.
