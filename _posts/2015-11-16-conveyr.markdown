@@ -3,6 +3,7 @@ layout: post
 title:  "Conveyr: The automation revolution"
 date:   2015-11-16 16:29:24
 categories: projects featured
+image: /img/conveyr-project.png
 ---
 Automated project management walks a tight rope between cost and ease-of-use. As a result, cheap/free software is a no-brainer for small businesses.
 
@@ -17,6 +18,8 @@ In retrospect, I should have seen it coming, but that's beside the point. Enter 
 - Store customer info and project data in one place
 
 Having worked with Salesforce before, I wanted to create a system where automation felt tangible and accessible to everyone. No apex code, no triggers, no workflow hell. Conveyor belts inspired me to design a similar process, where projects were boxed up and moved down the line step by step to completion. For each product or service, Conveyr would have a "belt" or pipeline that was made up of stages. Each stage had a to-do list to be completed before moving to the next stage. Basic project management: done.
+
+![conveyr-project](/img/conveyr-project.png)
 
 At first I thought it would be nice if each employee "owned" projects in a particular stage. Accounting would have an accounting stage and then contracting, construction, monitoring, finish. As it happens, small business employees sometimes wear many hats and Conveyr needed to be able to handle that. Subscription based task assignment was perfect. Each employee would decide which projects they needed to see at specific stages. Users were presented with a list of all stages and would select which ones they wanted to subscribe to. The Conveyr dashboard would then aggregate together all the to-do lists for all subscribed stages and show the projects that needed those specific to-do's to be completed. Auto-assigned tasks with group visibility: done.
 
