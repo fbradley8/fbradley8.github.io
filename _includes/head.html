@@ -25,11 +25,11 @@
         }, 500)
       }
 
-      var setHash = function(hash) {
-        window.history.replaceState(null, null, hash);
+      var setHash = function(e) {
+        window.history.replaceState(null, null, e.target.parentElement.getAttribute('href'));
       }
-      window.top.document.querySelectorAll('a[href="#home"]').onclick = setHash('#home');
-      window.top.document.querySelectorAll('a[href="#projects"]').onclick = setHash('#projects');
+      window.top.document.querySelectorAll('a[href="#home"]').onclick = setHash;
+      window.top.document.querySelectorAll('a[href="#projects"]').onclick = setHash;
     });
     
     
