@@ -77,4 +77,4 @@ function createInvoice(parameters, callback) {
 }
 {% endhighlight %}
 
-The template file will have <variables> surrounded by carats that the above script will replace. For example, if our template contains the text <price>, it will be swapped out with the price URL parameter.
+The template file will have ``<variables>`` surrounded by carats that the above script will replace. For example, if our template contains the text ``<price>``, it will be swapped out with the price URL parameter.
