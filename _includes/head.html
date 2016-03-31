@@ -28,8 +28,8 @@
       var setHash = function(e) {
         window.history.replaceState(null, null, e.target.parentElement.getAttribute('href'));
       }
-      window.top.document.querySelectorAll('a[href="#home"]').onclick = setHash;
-      window.top.document.querySelectorAll('a[href="#projects"]').onclick = setHash;
+      window.top.document.querySelectorAll('a[href="#home"]')[0].onclick = setHash;
+      window.top.document.querySelectorAll('a[href="#projects"]')[0].onclick = setHash;
     });
     
     
