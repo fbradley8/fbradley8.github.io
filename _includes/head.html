@@ -5,35 +5,35 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
+  <link href="https://uploads.branded.me/ZfuRCDPu9rGcAbJ5E1w2_0_P13SZqtYZ_nPzXzSPi__jzpOpt6AnBvStGxhYviK-bbtlnFiri8TpP-L2Aa" rel="icon" type="image/png"/>
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-red.min.css">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-red.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.js"></script>
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(event) {
       var hash = window.location.hash.substring(1);
-      if (hash.length) {
-        link = window.top.document.querySelectorAll('a[href="#' + hash + '"]');
-        setTimeout(function() {
-          link[0].click();
-        }, 500)
+      var isHome = window.location.pathname == '/';
+      if (hash.length && isHome) {
+        document.querySelectorAll('a[href="#' + hash + '"]')[0].classList.add('is-active');
+        document.querySelectorAll('div#' + hash)[0].classList.add('is-active');
+      } else {
+        document.querySelectorAll('a[href="#home"]')[0].classList.add('is-active');
+        document.querySelectorAll('div#home')[0].classList.add('is-active');
       }
 
       var setHash = function(e) {
         window.history.replaceState(null, null, e.target.parentElement.getAttribute('href'));
       }
-      window.top.document.querySelectorAll('a[href="#home"]')[0].onclick = setHash;
-      window.top.document.querySelectorAll('a[href="#projects"]')[0].onclick = setHash;
+      document.querySelectorAll('a[href="#home"]')[0].onclick = setHash;
+      document.querySelectorAll('a[href="#projects"]')[0].onclick = setHash;
     });
-    
-    
-    
+
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
