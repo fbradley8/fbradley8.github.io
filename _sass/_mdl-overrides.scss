@@ -211,15 +211,8 @@ html, body {
   z-index: 99;
 }
 
-
 .mdl-layout__tab-panel:not(.is-active) {
   display: none;
-}
-
-.mdl-layout__tab-bar .spacer {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .mdl-navigation__link--icon > .material-icons,
