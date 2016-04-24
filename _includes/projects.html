@@ -17,13 +17,15 @@
         <a href="{{ post.url | prepend: site.baseurl }}" class="mdl-button">Read more</a>
       </div>
     </div>
-    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn{{ forloop.index }}">
-      <i class="material-icons">more_vert</i>
-    </button>
-    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn{{ forloop.index }}">
-      <li><a {% unless post.source %} disabled {% endunless %} class="mdl-menu__item" href="{{ post.source }}">View Source</a></li>
-      <li><a {% unless post.download %} disabled {% endunless %} class="mdl-menu__item" href="{{ post.download }}">Download</a></li>
-    </ul>
+    {% unless post.source and post.download %}
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn{{ forloop.index }}">
+        <i class="material-icons">more_vert</i>
+      </button>
+      <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn{{ forloop.index }}">
+        <li><a {% unless post.source %} disabled {% endunless %} class="mdl-menu__item" href="{{ post.source }}">View Source</a></li>
+        <li><a {% unless post.download %} disabled {% endunless %} class="mdl-menu__item" href="{{ post.download }}">Download</a></li>
+      </ul>
+    {% endunless %}
   </section>
 {% endfor %}
 </div>
