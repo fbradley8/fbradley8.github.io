@@ -17,7 +17,7 @@
         <a href="{{ post.url | prepend: site.baseurl }}" class="mdl-button">Read more</a>
       </div>
     </div>
-    {% unless post.source and post.download %}
+    {% if post.source and post.download %}
       <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn{{ forloop.index }}">
         <i class="material-icons">more_vert</i>
       </button>
@@ -25,7 +25,7 @@
         <li><a {% unless post.source %} disabled {% endunless %} class="mdl-menu__item" href="{{ post.source }}">View Source</a></li>
         <li><a {% unless post.download %} disabled {% endunless %} class="mdl-menu__item" href="{{ post.download }}">Download</a></li>
       </ul>
-    {% endunless %}
+    {% endif %}
   </section>
 {% endfor %}
 </div>
