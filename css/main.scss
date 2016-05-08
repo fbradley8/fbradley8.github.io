@@ -79,6 +79,13 @@ hr {
   flex-grow: 1;
 }
 
+.mdl-mega-footer a {
+    transition: all 150ms;
+}
+.mdl-mega-footer a:hover {
+    color: #FFF;
+}
+
 a[disabled] {
     pointer-events: none;
 }
