@@ -3,12 +3,12 @@ layout: post
 title:  "Control your TV with a Raspberry Pi"
 date:   2016-6-7
 categories: projects
-image: /img/raspi-ir-remote.png
+image: /img/raspi-ir-remote.jpg
 ---
 
 In this tutorial we'll be setting up a Raspberry Pi for use as an infrared remote control. If you use your Raspberry Pi for watching videos there might be better ways for controlling a TV, like HDMI-CEC if your TV supports it.
 
-![Completed Raspi and breadboard](/img/raspi-ir-remote.png)
+![Completed Raspi and breadboard](/img/raspi-ir-remote.jpg)
 
 For this project you will need:
 
@@ -30,7 +30,7 @@ $ sudo apt-get update
 $ sudo apt-get install lirc
 {% endhighlight %}
 
-Fork the project files so you'll have a basic web remote:
+Download the project files so you'll have a basic web remote:
 
 {% highlight bash %}
 $ cd ~
