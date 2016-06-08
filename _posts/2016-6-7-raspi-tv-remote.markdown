@@ -3,9 +3,12 @@ layout: post
 title:  "Control your TV with a Raspberry Pi"
 date:   2016-6-7
 categories: projects
+image: /img/raspi-ir-remote.png
 ---
 
 In this tutorial we'll be setting up a Raspberry Pi for use as an infrared remote control. If you use your Raspberry Pi for watching videos there might be better ways for controlling a TV, like HDMI-CEC if your TV supports it.
+
+![Completed Raspi and breadboard](/img/raspi-ir-remote.png)
 
 For this project you will need:
 
