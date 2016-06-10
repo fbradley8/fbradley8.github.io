@@ -102,7 +102,7 @@ $ sudo /etc/init.d/lirc restart
 
 ##### 5. Test
 
-If all is working fine, you should now be able to successfully run the following (assuming you called the power button key_power):
+If all is working fine, you should now be able to successfully run the following (assuming you named your TV Element and the power button key_power):
 
 {% highlight bash %}
 $ irsend SEND_ONCE Element key_power
