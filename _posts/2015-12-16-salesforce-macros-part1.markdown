@@ -24,7 +24,7 @@ How many times a day do you send out the same email? Today was a great day and y
 
 We'll dive into that last step later, but the others can all be predefined and filled out by a macro.
 
-IMAGE
+![Macro Editor](https://raw.githubusercontent.com/fbradley8/fbradley8.github.io/master/img/salesforce-macros-edit.jpg)
 
 The user of this extension will create a new macro and map email fields to either object fields or text. For example, this macro will always use the same email template, so I will map the templateId email field to the ID of the template I need, stored as text. Other email fields are mapped to case and account fields.
 
