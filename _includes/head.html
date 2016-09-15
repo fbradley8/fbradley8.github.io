@@ -16,6 +16,10 @@
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
   <script type="text/javascript">
+    window.onscroll = function() {
+      window.scrollpos = window.scrollY;
+    };
+
     document.addEventListener("DOMContentLoaded", function(event) {
       var hash = window.location.hash.substring(1);
       var isHome = window.location.pathname == '/';
@@ -32,6 +36,11 @@
       }
       document.querySelectorAll('a[href="#home"]')[0].onclick = setHash;
       document.querySelectorAll('a[href="#projects"]')[0].onclick = setHash;
+    });
+
+    document.addEventListener('mdl-componentupgraded', function(event) {
+      document.getElementsByClassName("mdl-layout")[0].scrollTop = window.scrollpos;
+      window.onscroll = null;
     });
 
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
