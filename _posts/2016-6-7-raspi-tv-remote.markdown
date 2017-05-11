@@ -17,6 +17,7 @@ For this project you will need:
 - 1x IR LED
 - 1x IR Receiver
 - 1x 10k Ohm Resistor
+- 1x NPN Transistor
 - Jumper Wires
 
 To control the TV from the Raspi, we'll use LIRC (the Linux Infrared Remote Control package). Check the [LIRC remotes database](http://lirc-remotes.sourceforge.net/remotes-table.html) to see if someone's already contributed the codes for your TV. If it's in there, you're in luck! And you don't have to buy an IR Receiver.
