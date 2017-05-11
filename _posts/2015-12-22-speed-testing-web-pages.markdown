@@ -3,7 +3,7 @@ layout: post
 title:  "Speed Testing Web Pages"
 date:   2015-12-22
 categories: projects
-image: https://developers.google.com/web/tools/chrome-devtools/images/timeline.png
+image: /img/dev-tools.png
 ---
 
 Sometimes there are rare cases in which the Chrome DevTools aren't quite what you need. I recently had to perform a micro-optimization that wasn't really measureable in the network tab.
